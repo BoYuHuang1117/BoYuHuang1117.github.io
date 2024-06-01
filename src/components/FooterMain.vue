@@ -1,6 +1,6 @@
 <template>
     <footer>
-      <p>&copy; 2024 My Personal Website</p>
+      <p>&copy; May 2024 My Personal Website</p>
       <!-- Add any other footer content here -->
     </footer>
   </template>
