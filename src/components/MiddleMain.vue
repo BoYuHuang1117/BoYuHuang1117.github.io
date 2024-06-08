@@ -37,13 +37,19 @@
     <li><a href="https://www.linkedin.com/in/bo-yuhuang-michael/" target="_blank" rel="noopener noreferrer"> Linkedin Profile </a><font-awesome-icon icon="fa-brands fa-linkedin" /></li>
     <li><a href="https://github.com/BoYuHuang1117" target="_blank" rel="noopener noreferrer"> Github Profile </a><font-awesome-icon icon="fa-brands fa-github" /></li>
     <li><a href="https://leetcode.com/u/michael_byhuang/" target="_blank" rel="noopener noreferrer"> Leetcode Profile </a><font-awesome-icon icon="fa-solid fa-code" /></li>
-
-    </main>
-  </template>
+    <AutoPlay />
+  </main>
+  
+  <AutoPlay />
+</template>
   
 <script>
+  import AutoPlay from './ImageSlider.vue';
   export default {
     name: 'MiddleMain',
+    components: {
+      AutoPlay
+    }
   };
 </script>
 
