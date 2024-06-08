@@ -15,7 +15,7 @@
     <li>Dec 2021 - Houston, TX</li>
     <li>Jul 2021 - Chicago, IL</li>
     <li>Jul 2021 - Dune National Park, IN</li>
-    <li>Dev 2019 - Dallas, TX</li>
+    <li>Dec 2019 - Dallas, TX</li>
     
     <h1>Achievement</h1>
     <li>Silver Award of 2019 ICBHI</li>

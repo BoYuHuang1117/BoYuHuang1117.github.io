@@ -12,10 +12,11 @@ export default {
 </script>
 
 <style scoped>
-/* Add your CSS styles here */
 header {
-  background-color: #333;
+  text-align: center;
+  font-style: oblique;
+  background-color: #3489eb;
   color: #fff;
-  padding: 20px;
+  padding: 15px;
 }
 </style>
