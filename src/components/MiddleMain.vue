@@ -5,17 +5,22 @@
     
     <h1>Travel Across the States</h1>
     <li>May 2024 - Indianapolis, IN</li>
-    <li>May 2024 - Milwaukee, WI (Aurora light)</li>
+    <li>May 10th 2024 - Aurora light</li>
     <li>May 2024 - Holland, MI</li>
+    <li>April 8th 2024 - Solar Eclipse</li>
     <li>Feb 2024 - Phoenix, AZ</li>
+    <p> 2024 Hightlights</p>
+    <twentyFourSlide />
     <li>Jul 2023 - Denver CO</li>
     <li>May 2023 - Minneapolis MN</li>
     <li>Mar 2023 - Seatle, WA </li>
+    <p> 2023 Hightlights</p>
     <li>Sep 2022 - Los Angeles, CA</li>
     <li>Dec 2021 - Houston, TX</li>
     <li>Jul 2021 - Chicago, IL</li>
     <li>Jul 2021 - Dune National Park, IN</li>
     <li>Dec 2019 - Dallas, TX</li>
+    <p> Early Hightlights</p>
     
     <h1>Achievement</h1>
     <li>Silver Award of 2019 ICBHI</li>
@@ -37,18 +42,15 @@
     <li><a href="https://www.linkedin.com/in/bo-yuhuang-michael/" target="_blank" rel="noopener noreferrer"> Linkedin Profile </a><font-awesome-icon icon="fa-brands fa-linkedin" /></li>
     <li><a href="https://github.com/BoYuHuang1117" target="_blank" rel="noopener noreferrer"> Github Profile </a><font-awesome-icon icon="fa-brands fa-github" /></li>
     <li><a href="https://leetcode.com/u/michael_byhuang/" target="_blank" rel="noopener noreferrer"> Leetcode Profile </a><font-awesome-icon icon="fa-solid fa-code" /></li>
-    <AutoPlay />
   </main>
-  
-  <AutoPlay />
 </template>
   
 <script>
-  import AutoPlay from './ImageSlider.vue';
+  import twentyFourSlide from './ImageSlider.vue';
   export default {
     name: 'MiddleMain',
     components: {
-      AutoPlay
+      twentyFourSlide
     }
   };
 </script>
