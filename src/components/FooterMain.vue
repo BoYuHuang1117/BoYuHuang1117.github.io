@@ -12,12 +12,12 @@
   </script>
   
   <style scoped>
-  /* Add your CSS styles here */
   footer {
-    background-color: #333;
-    color: #fff;
-    padding: 20px;
     text-align: center;
+    font-style: oblique;
+    background-color: #3489eb;
+    color: #fff;
+    padding: 10px;
   }
   </style>
   
