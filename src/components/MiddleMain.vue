@@ -34,7 +34,7 @@
     <h1>Area of Interests</h1>
     <li>Basketball Analysis <font-awesome-icon icon="fa-solid fa-basketball" /></li>
     <li>Pickleball lover <font-awesome-icon icon="fa-solid fa-table-tennis-paddle-ball" /></li>
-    <li>Backend Software Engineering <font-awesome-icon icon="fa-solid fa-laptop" /></li>
+    <li>Backend Software Engineering <font-awesome-icon icon="fa-solid fa-laptop" /> <font-awesome-icon icon="fa-solid fa-database" /> <font-awesome-icon icon="fa-solid fa-server" /></li>
     <li>Natural Language Processing and LLM <font-awesome-icon icon="fa-solid fa-language" /></li>
     
     <h1>More about Me</h1>
