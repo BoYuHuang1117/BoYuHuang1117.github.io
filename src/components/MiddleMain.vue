@@ -15,12 +15,15 @@
     <li>May 2023 - Minneapolis MN</li>
     <li>Mar 2023 - Seatle, WA </li>
     <p> 2023 Hightlights</p>
+    <twentyThreeSlide />
     <li>Sep 2022 - Los Angeles, CA</li>
+    <li>Jul 2022 - Madison, WI</li>
     <li>Dec 2021 - Houston, TX</li>
     <li>Jul 2021 - Chicago, IL</li>
     <li>Jul 2021 - Dune National Park, IN</li>
     <li>Dec 2019 - Dallas, TX</li>
     <p> Early Hightlights</p>
+    <earlySlide />
     
     <h1>Achievement</h1>
     <li>Silver Award of 2019 ICBHI</li>
@@ -46,11 +49,15 @@
 </template>
   
 <script>
+  import earlySlide from './EarlySlider.vue'
   import twentyFourSlide from './TwentyFourSlider.vue';
+  import twentyThreeSlide from './TwentyThreeSlider.vue'
   export default {
     name: 'MiddleMain',
     components: {
-      twentyFourSlide
+      earlySlide,
+      twentyFourSlide,
+      twentyThreeSlide
     }
   };
 </script>
