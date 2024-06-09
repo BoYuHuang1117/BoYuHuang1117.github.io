@@ -46,7 +46,7 @@
 </template>
   
 <script>
-  import twentyFourSlide from './ImageSlider.vue';
+  import twentyFourSlide from './TwentyFourSlider.vue';
   export default {
     name: 'MiddleMain',
     components: {
