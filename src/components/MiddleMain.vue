@@ -1,8 +1,28 @@
 <template>
   <main>
     <h1>Introduction</h1>
-    <p>I am a genuine sports fan who plays basketball, pickleball and tennis who loves sci-fi movies and animations.</p>
+    <p>Sports enthusiast - I am a genuine sports fan who enjoys a wide variety of sports including basketball, pickleball and tennis. 
+      I also do workout to build up muscle and stay healthy.</p>
+    <p>Refreshing with stories and books - In my freetime, I love watching sci-fi movies and TV shows.
+      Not only do I watch pictures, I also engage in reading the original book series such as Dune and Game of Thrones.</p>
+    <p>Stay curious and keep exploring - Along my journey in the US, I experience a lot including foods and great nature. 
+      I try my best to enjoy the moment, be relentless and never rest! </p>
     
+    <h1>Area of Interests</h1>
+    <li>Basketball Analysis <font-awesome-icon icon="fa-solid fa-basketball" /></li>
+    <li>Pickleball lover <font-awesome-icon icon="fa-solid fa-table-tennis-paddle-ball" /></li>
+    <li>Backend Software Engineering <font-awesome-icon icon="fa-solid fa-laptop" /> <font-awesome-icon icon="fa-solid fa-database" /> <font-awesome-icon icon="fa-solid fa-server" /></li>
+    <li>Natural Language Processing and LLM <font-awesome-icon icon="fa-solid fa-language" /></li>
+
+    <h1>Publications</h1>
+    <li><a href="https://link.springer.com/chapter/10.1007/978-3-030-30636-6_52" target="_blank" rel="noopener noreferrer"> Improvement of Environment and Camera Setting on Extraction of Heart Rate Using Eulerian Video Magnification</a></li>
+    <li><a href="https://www.semanticscholar.org/paper/An-Finite-Element-Analysis-of-Patellar-and-Tendon-Huang-Hsu/bd83636e6fd716d94296545a6fe52e1976392e5d" target="_blank" rel="noopener noreferrer"> A Finite Element Analysis Simulation of Patellar and Quadriceps Tendon injury during Squatting</a></li>
+
+    <h1>Achievement</h1>
+    <li>Silver Award of 2019 ICBHI</li>
+    <img src="../assets/ICBHI-onStage.jpg" alt="on stage" style="width: 400px;height: 300px;">
+    <img src="../assets/ICBHI-solo.jpg" alt="solo" style="width: 300px;height: 400px;">
+
     <h1>Travel Across the States</h1>
     <li>May 2024 - Indianapolis, IN</li>
     <li>May 10th 2024 - Aurora light</li>
@@ -24,21 +44,6 @@
     <li>Dec 2019 - Dallas, TX</li>
     <p> Early Hightlights</p>
     <earlySlide />
-    
-    <h1>Achievement</h1>
-    <li>Silver Award of 2019 ICBHI</li>
-    <img src="../assets/ICBHI-onStage.jpg" alt="on stage" style="width: 400px;height: 300px;">
-    <img src="../assets/ICBHI-solo.jpg" alt="solo" style="width: 300px;height: 400px;">
-    
-    <h1>Publications</h1>
-    <li><a href="https://link.springer.com/chapter/10.1007/978-3-030-30636-6_52" target="_blank" rel="noopener noreferrer"> Improvement of Environment and Camera Setting on Extraction of Heart Rate Using Eulerian Video Magnification</a></li>
-    <li><a href="https://www.semanticscholar.org/paper/An-Finite-Element-Analysis-of-Patellar-and-Tendon-Huang-Hsu/bd83636e6fd716d94296545a6fe52e1976392e5d" target="_blank" rel="noopener noreferrer"> A Finite Element Analysis Simulation of Patellar and Quadriceps Tendon injury during Squatting</a></li>
-    
-    <h1>Area of Interests</h1>
-    <li>Basketball Analysis <font-awesome-icon icon="fa-solid fa-basketball" /></li>
-    <li>Pickleball lover <font-awesome-icon icon="fa-solid fa-table-tennis-paddle-ball" /></li>
-    <li>Backend Software Engineering <font-awesome-icon icon="fa-solid fa-laptop" /> <font-awesome-icon icon="fa-solid fa-database" /> <font-awesome-icon icon="fa-solid fa-server" /></li>
-    <li>Natural Language Processing and LLM <font-awesome-icon icon="fa-solid fa-language" /></li>
     
     <h1>More about Me</h1>
     <li>Location: Chicago-Milwaukee area <font-awesome-icon icon="fa-solid fa-location-crosshairs" /></li>
