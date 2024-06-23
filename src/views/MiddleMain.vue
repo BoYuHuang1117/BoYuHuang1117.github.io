@@ -54,9 +54,9 @@
 </template>
   
 <script>
-  import earlySlide from './EarlySlider.vue'
-  import twentyFourSlide from './TwentyFourSlider.vue';
-  import twentyThreeSlide from './TwentyThreeSlider.vue'
+  import earlySlide from '@/components/EarlySlider.vue'
+  import twentyFourSlide from '@/components/TwentyFourSlider.vue';
+  import twentyThreeSlide from '@/components/TwentyThreeSlider.vue'
   export default {
     name: 'MiddleMain',
     components: {
