@@ -39,8 +39,8 @@
 </script>
   
 <style scoped>
-  /* Add your CSS styles here */
   main {
+    text-align: left;
     padding: 20px;
   }
 </style>

@@ -1,7 +1,6 @@
 <template>
   <header>
-    <h1>Welcome to Michael's Personal Website</h1>
-    <!-- Add any other header content here -->
+    <h1>Hi there! My name is Michael Huang. I am a software engineer</h1>
   </header>
 </template>
 
@@ -15,8 +14,8 @@ export default {
 header {
   text-align: center;
   font-style: oblique;
-  background-color: #3489eb;
+  background-color: blue;
   color: #fff;
-  padding: 15px;
+  padding: 8px;
 }
 </style>

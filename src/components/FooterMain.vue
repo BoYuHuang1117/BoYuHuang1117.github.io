@@ -1,7 +1,6 @@
 <template>
     <footer>
       <p>&copy; May 2024 My Personal Website</p>
-      <!-- Add any other footer content here -->
     </footer>
   </template>
   
@@ -15,7 +14,7 @@
   footer {
     text-align: center;
     font-style: oblique;
-    background-color: #3489eb;
+    background-color: green;
     color: #fff;
     padding: 10px;
   }
