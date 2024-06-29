@@ -8,6 +8,12 @@
     <p>Stay curious and keep exploring - Along my journey in the US, I experience a lot including foods and great nature. 
       I try my best to enjoy the moment, be relentless and never rest! </p>
     
+      <div>
+      <img src="../assets/selfie.png" alt="selfie" style="width: 350px;height: 450px; text-align: center;">
+    </div>
+  </main>
+
+  <content>
     <h1>Area of Interests</h1>
     <li>Basketball Analysis <font-awesome-icon icon="fa-solid fa-basketball" /></li>
     <li>Pickleball lover <font-awesome-icon icon="fa-solid fa-table-tennis-paddle-ball" /></li>
@@ -19,7 +25,7 @@
     <li><a href="https://www.linkedin.com/in/bo-yuhuang-michael/" target="_blank" rel="noopener noreferrer"> Linkedin Profile </a><font-awesome-icon icon="fa-brands fa-linkedin" /></li>
     <li><a href="https://github.com/BoYuHuang1117" target="_blank" rel="noopener noreferrer"> Github Profile </a><font-awesome-icon icon="fa-brands fa-github" /></li>
     <li><a href="https://leetcode.com/u/michael_byhuang/" target="_blank" rel="noopener noreferrer"> Leetcode Profile </a><font-awesome-icon icon="fa-solid fa-code" /></li>
-  </main>
+  </content>
 </template>
   
 <script>
@@ -29,8 +35,13 @@
 </script>
 
 <style scoped>
-  /* Add your CSS styles here */
   main {
+    text-align: center;
+    padding: 20px;
+  }
+
+  content {
+    text-align: left;
     padding: 20px;
   }
 </style>

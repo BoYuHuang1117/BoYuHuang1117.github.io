@@ -1,10 +1,19 @@
 <template>
   <HeaderMain />
   <div id="app">
-    <router-link to="/">Home</router-link> |
-    <router-link to="/photo">Photo</router-link> |
-    <router-link to="publication">Publications and Awards</router-link>
+    <tab>
+      <router-link to="/">Home</router-link>
+    </tab>
+    |
+    <tab>
+      <router-link to="/photo">Photo</router-link>
+    </tab>
+    |
+    <tab>
+      <router-link to="publication">Publications and Awards</router-link>
+    </tab>
     <router-view />
+    
   </div>
   <FooterMain />
 </template>
@@ -25,5 +34,17 @@ export default {
 <style>
 #app {
   font-family: Arial, sans-serif;
+}
+tab {
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-bottom: 15px;
+  padding-top: 8px;
+  font-size: larger;
+  font-style: italic;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  text-align: center;
+  background-color: aquamarine;
+  color: black;
 }
 </style>
