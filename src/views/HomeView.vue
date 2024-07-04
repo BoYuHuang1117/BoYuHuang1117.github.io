@@ -1,7 +1,7 @@
 <template>
-  <div id="main">
+  <main>
     <MiddleMain />
-  </div>
+  </main>
 </template>
 
 <script>
@@ -17,5 +17,6 @@ export default {
 <style scoped>
   main {
     padding: 20px;
+    background-color: lightgrey;
   }
 </style>
