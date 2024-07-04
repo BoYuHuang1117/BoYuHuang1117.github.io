@@ -42,6 +42,7 @@
   main {
     text-align: left;
     padding: 20px;
+    background-color: lightgrey;
   }
 </style>
     
