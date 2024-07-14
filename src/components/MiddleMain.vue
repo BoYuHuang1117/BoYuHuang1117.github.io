@@ -44,5 +44,13 @@
     text-align: left;
     padding: 20px;
   }
+
+  li {
+    margin-bottom: 10px;
+    background-color: lightskyblue;
+    padding: 6px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
 </style>
   
