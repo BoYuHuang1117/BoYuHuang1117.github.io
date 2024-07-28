@@ -4,7 +4,7 @@
             <li>{{ interest.key }}
                 <span
                     class="expand"
-                    @click="() => (state = !state)"
+                    @click="handleClick"
                     v-text="toggletText[state * 1]"
                 >
                 </span>
@@ -17,15 +17,26 @@
 </template>
 
 <script>
-import { defineComponent, ref } from "vue";
+import { defineComponent, ref } from 'vue';
+
 export default defineComponent({
     name: 'InterestRow',
     props: ["interest"],
     setup() {
-        //set default state, could be based on some attributes
         const state = ref(false);
         return { toggletText: ["More", "Hide"], state };
     },
+    methods:{
+        handleClick(){
+            this.state = !this.state
+        },
+        collapse(){
+            this.state = false
+        },
+        expand(){
+            this.state = true
+        },
+    }
 });
 </script>
 
