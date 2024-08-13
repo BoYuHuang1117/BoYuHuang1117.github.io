@@ -1,6 +1,6 @@
 <template>
   <header>
-    <h1>Hi there! My name is Michael Huang. I am a software engineer</h1>
+    <h1>Hi there! My name is Michael. I am a software engineer</h1>
   </header>
 </template>
 
