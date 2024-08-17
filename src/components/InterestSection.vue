@@ -24,7 +24,7 @@ export default defineComponent({
   setup() {
     const interests = ref([
       {
-        key: 'Basketball Analysis',
+        key: 'Basketball Analysis and enthusiast',
         icons: ['fa-solid fa-basketball'],
         items: ['Small forward', 'Golden State Warriors fans'],
       },
@@ -36,12 +36,14 @@ export default defineComponent({
       {
         key: 'Backend Software Engineering',
         icons: ['fa-solid fa-laptop', 'fa-solid fa-database', 'fa-solid fa-server'],
-        items: ['Python Flask', 'MySQL', 'Celery asynchronous task', 'Docker'],
+        items: ['Programming languages: Python, C, C++, Java', 'Databases: MySQL', 'Deployment: Github, Docker',
+           'Operate System: Ubuntu', 'Frontend tech: Vue 3, NodeJS', 'Cloud services: AWS'
+        ],
       },
       {
         key: 'Natural Language Processing and LLM',
         icons: ['fa-solid fa-language'],
-        items: ['Bert', 'Transfer Learning', 'LSTM', 'Recurrent Neural Network (RNN)'],
+        items: ['Experience: Bert, Transfer Learning', 'Models built: LSTM, Recurrent Neural Network (RNN)'],
       }
     ]);
 
