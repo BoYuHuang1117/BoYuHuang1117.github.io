@@ -13,7 +13,7 @@
         </template> -->
       </PhotoRow>
       <p> 2024 Hightlights </p>
-      <twentyFourSlide />
+      <PhotoSlider :photos="twenty_four_slides"></PhotoSlider>
       
       <PhotoRow 
         v-for="(photo_list, index) in twenty_three_list"
@@ -25,7 +25,7 @@
         
       </PhotoRow>
       <p> 2023 Hightlights </p>
-      <twentyThreeSlide />
+      <PhotoSlider :photos="twenty_three_slides"></PhotoSlider>
       
       <PhotoRow 
         v-for="(photo_list, index) in early_list"
@@ -37,24 +37,20 @@
         
       </PhotoRow>
       <p> Early Hightlights </p>
-      <earlySlide />
+      <PhotoSlider :photos="early_slides"></PhotoSlider>
     </main>
 </template>
     
 <script>
   import { defineComponent, ref } from 'vue';
   import PhotoRow from '@/components/PhotoRow.vue';
-  import earlySlide from '@/components/EarlySlider.vue'
-  import twentyFourSlide from '@/components/TwentyFourSlider.vue';
-  import twentyThreeSlide from '@/components/TwentyThreeSlider.vue'
+  import PhotoSlider from '@/components/PhotoSlider.vue';
   
   export default defineComponent({
     name: 'PhotoGallary',
     components: {
       PhotoRow,
-      earlySlide,
-      twentyFourSlide,
-      twentyThreeSlide
+      PhotoSlider,
     },
     setup () {
       const twenty_four_list = [
@@ -121,6 +117,51 @@
           items: ['images/~2022/2019.JPG']
         }
       ];
+
+      const twenty_four_slides = [
+        'images/2024/AZ-1.jpg',
+        'images/2024/AZ-2.jpg',
+        'images/2024/AZ-3.jpg',
+        'images/2024/AZ-4.jpg',
+        'images/2024/solar-eclipse.JPG',
+        'images/2024/MI-1.jpg',
+        'images/2024/MI-2.jpg',
+        'images/2024/MI-3.jpg',
+        'images/2024/Aurora-light-1.jpg',
+        'images/2024/Aurora-light-2.jpg',
+        'images/2024/IN-1.jpg',
+        'images/2024/IN-2.jpg',
+        'images/2024/IN-3.jpg',
+      ];
+
+      const twenty_three_slides = [
+        'images/2023/snow-1.jpg',
+        'images/2023/snow-2.jpg',
+        'images/2023/WA-1.jpg',
+        'images/2023/WA-2.jpg',
+        'images/2023/WA-3.jpg',
+        'images/2023/WA-4.jpg',
+        'images/2023/MN-1.jpg',
+        'images/2023/MN-2.jpg',
+        'images/2023/MN-3.jpg',
+        'images/2023/CO-1.jpg',
+        'images/2023/CO-2.jpg',
+        'images/2023/CO-3.jpg',
+        'images/2023/google.jpg',
+      ];
+
+      const early_slides = [
+        'images/~2022/2019.JPG',
+        'images/~2022/Chicago-1.JPG',
+        'images/~2022/Houston-1.jpg',
+        'images/~2022/LA-1.jpg',
+        'images/~2022/LA-2.jpg',
+        'images/~2022/LA-3.jpg',
+        'images/~2022/LA-4.jpg',
+        'images/~2022/Madison.JPG',
+        'images/~2022/MKE-1.JPG',
+        'images/~2022/Dune.jpg',
+      ];
       
       const expandedIndex = ref([null, null, null]);
       
@@ -132,6 +173,9 @@
         twenty_four_list,
         twenty_three_list,
         early_list,
+        twenty_four_slides,
+        twenty_three_slides,
+        early_slides,
         expandedIndex,
         handleToggle
       };
