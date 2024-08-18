@@ -8,7 +8,7 @@
     <p>Stay curious and keep exploring - Along my journey in the US, I experience a lot including foods and great nature. 
       I try my best to enjoy the moment, be relentless and never rest! </p>
     
-      <div>
+    <div>
       <img src="../assets/selfie.png" alt="selfie" style="width: 350px;height: 450px; text-align: center;">
     </div>
   </main>
@@ -20,7 +20,7 @@
 
   <InterestSection />
   
-  <content>  
+  <content>
     <h1>More about Me</h1>
     <li>Location: Chicago-Milwaukee area <font-awesome-icon icon="fa-solid fa-location-crosshairs" /></li>
     <li><a href="https://www.linkedin.com/in/bo-yuhuang-michael/" target="_blank" rel="noopener noreferrer"> Linkedin Profile </a><font-awesome-icon icon="fa-brands fa-linkedin" /></li>
@@ -53,7 +53,7 @@
 
   li {
     margin-bottom: 10px;
-    background-color: lightskyblue;
+    background-color: lightgreen;
     padding: 6px;
     border-radius: 5px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
