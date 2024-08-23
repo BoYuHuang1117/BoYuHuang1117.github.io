@@ -9,7 +9,7 @@
         @toggle="handleToggle(0, index)"
       >
         <template v-for="(item, index) in photo_list.items" :key="index">
-          <img :src="item.img" :style="{ width: item.w + 'px', height: item.h + 'px', }" style="text-align: center">
+          <ImageEnlarge :src="item.img" :width="item.w" :height="item.h" />
         </template>
       </PhotoRow>
       <p> 2024 Hightlights </p>
@@ -23,7 +23,7 @@
         @toggle="handleToggle(1, index)"
       >
         <template v-for="(item, index) in photo_list.items" :key="index">
-          <img :src="item.img" :style="{ width: item.w + 'px', height: item.h + 'px', }" style="text-align: center">
+          <ImageEnlarge :src="item.img" :width="item.w" :height="item.h" />
         </template>
         
       </PhotoRow>
@@ -38,7 +38,7 @@
         @toggle="handleToggle(2, index)"
       >
         <template v-for="(item, index) in photo_list.items" :key="index">
-          <img :src="item.img" :style="{ width: item.w + 'px', height: item.h + 'px', }" style="text-align: center">
+          <ImageEnlarge :src="item.img" :width="item.w" :height="item.h" />
         </template>
       </PhotoRow>
       <p> Early Hightlights </p>
@@ -48,12 +48,14 @@
     
 <script>
   import { defineComponent, ref } from 'vue';
+  import ImageEnlarge from '@/components/ImageEnlarge.vue';
   import PhotoRow from '@/components/PhotoRow.vue';
   import PhotoSlider from '@/components/PhotoSlider.vue';
   
   export default defineComponent({
     name: 'PhotoGallary',
     components: {
+      ImageEnlarge,
       PhotoRow,
       PhotoSlider,
     },
