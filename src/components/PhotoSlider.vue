@@ -11,7 +11,7 @@
     </Carousel>
 </template>
     
- <script>
+<script>
     import { defineComponent } from 'vue'
     import { Carousel, Pagination, Slide } from 'vue3-carousel'
 
