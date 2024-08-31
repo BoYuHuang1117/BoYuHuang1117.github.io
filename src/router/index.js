@@ -1,7 +1,8 @@
 import { createWebHistory, createRouter } from "vue-router";
 import HomePage from "@/views/HomeView.vue";
 import PhotoGallary from "@/views/PhotoView.vue";
-import AwardsPage from "@/views/AwardsView.vue"
+import AwardsPage from "@/views/AwardsView.vue";
+import ProjectPage from "@/views/ProjectsView.vue";
 
 const routes = [
   {
@@ -18,6 +19,11 @@ const routes = [
     path: "/publication",
     name: "Awards",
     component: AwardsPage,
+  },
+  {
+    path: "/project",
+    name: "Projects",
+    component: ProjectPage,
   }
 ];
 

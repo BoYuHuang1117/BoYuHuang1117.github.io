@@ -10,7 +10,11 @@
     </tab>
     |
     <tab>
-      <router-link to="publication">Publications and Awards</router-link>
+      <router-link to="/publication">Publications and Awards</router-link>
+    </tab>
+    |
+    <tab>
+      <router-link to="/project">Projects</router-link>
     </tab>
     <router-view />
     
