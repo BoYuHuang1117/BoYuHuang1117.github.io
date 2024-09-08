@@ -4,17 +4,17 @@
         <li> Adjustable window size </li>
         <li> Play with cursor </li>
         
-        <ImageEnlarge src="images/tetris.gif"></ImageEnlarge>
+        <ImageEnlarge src="images/tetris.gif" pos="center"></ImageEnlarge>
 
         <h1> Mandarin version of Amazon "Alexa" (雅婷姊) <a href="https://github.com/BoYuHuang1117/Audio-Keyword-Spotting-in-Chinese" target="_blank" rel="noopener noreferrer"> Link </a> </h1>
         <li> In data preprocessing folder, voice processing includes adding background noise and generate mel frequency cepstrum (MFCC) </li>
         <br>
         <li> In main training folder (./code), it demonstrates the loss vs. epoch graph, sample test case and model hyper-parameters summary </li>
-        <ImageEnlarge src="images/loss-vs-epoch.png"></ImageEnlarge>
-        <ImageEnlarge src="images/sample-audio.png" width=400 height=500></ImageEnlarge>
+        <ImageEnlarge src="images/loss-vs-epoch.png" pos="center"></ImageEnlarge>
+        <ImageEnlarge src="images/sample-audio.png" width=400 height=500 pos="center"></ImageEnlarge>
         <br><br>
         <li> Model architecture and hyper parameters </li>
-        <ImageEnlarge src="images/model-detail.png" width=350 height=450></ImageEnlarge>
+        <ImageEnlarge src="images/model-detail.png" width=350 height=450 pos="center"></ImageEnlarge>
         <br><br>
         <li> To play with the app, a simple terminal control version is provided in ./UI folder </li>
         <p> - Install requirements for Python </p>

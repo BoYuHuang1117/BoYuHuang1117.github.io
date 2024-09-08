@@ -1,5 +1,5 @@
 <template>
-    <img :src="src" :style="imageStyle" @click="openModal"/>
+    <img :src="src" :style="imageStyle" @click="openModal" :class="pos"/>
     <ImageModal v-if="isModalOpen" :src="src" @close="closeModal" />
 </template>
   
@@ -25,10 +25,14 @@
                 type: Number,
                 default: 300,
             },
+            pos: {
+                type: String,
+                default: `None`
+            },
         },
         setup(props) {
             const isModalOpen = ref(false);
-  
+            
             const imageStyle = computed(() => ({
                 width: `${props.width}px`,
                 height: `${props.height}px`,
@@ -59,6 +63,13 @@
   
   img {
     cursor: pointer;
+  }
+
+  .center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
   }
 </style>
   
