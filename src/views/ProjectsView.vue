@@ -20,6 +20,20 @@
         <p> - Install requirements for Python </p>
         <p> - Follow the prompt in terminal </p>
         <p> - Speak out the awakening keyword "Yating Jie" (雅婷姊) </p>
+
+        <h1> Modified v6 file system <a href="https://github.com/BoYuHuang1117/V6-File-System" target="_blank" rel="noopener noreferrer"> Link </a></h1>
+        <li> Serve as a file system that accepts Unix-like command </li>
+        <li> Capabilities </li>
+        <p> - Initalization v6 file system: initfs (filename) (# of block) (# of i-nodes) </p>
+        <p> - Choose the v6 file system: v6Name (filename) </p>
+        <p> - Copy external file into v6 file system: cpin (externalfile) (v6-file) </p>
+        <p> - Copy file in v6 file system out to external file: cpout (v6-file) (externalfile) </p>
+        <p> - Remove file: rm (v6-file) </p>
+        <p> - Create new directory: mkdir (v6dir) </p>
+        <p> - Change current directory: cd (v6dir) </p>
+        <p> - Display files in current directory: ls </p>
+        <p> - Exit the program: q </p>
+        
     </main>
 </template>
 
