@@ -1,6 +1,13 @@
 <template>
     <main>
-      <h1>Travel Across the States</h1>
+      <h1>Travel around the world</h1>
+      <p> 2024 East Europe Highlights </p>
+      <PhotoSlider :photos="twenty_four_europe_slides"></PhotoSlider>
+
+      <h1>Travel across the States</h1>
+      <p> 2024 Hightlights </p>
+      <PhotoSlider :photos="twenty_four_slides"></PhotoSlider>
+
       <PhotoRow 
         v-for="(photo_list, index) in twenty_four_list"
         :key="index"
@@ -12,8 +19,6 @@
           <ImageEnlarge :src="item.img" :width="item.w" :height="item.h" />
         </template>
       </PhotoRow>
-      <p> 2024 Hightlights </p>
-      <PhotoSlider :photos="twenty_four_slides"></PhotoSlider>
       
       <PhotoRow 
         v-for="(photo_list, index) in twenty_three_list"
@@ -29,6 +34,8 @@
       </PhotoRow>
       <p> 2023 Hightlights </p>
       <PhotoSlider :photos="twenty_three_slides"></PhotoSlider>
+      <p> Early Hightlights </p>
+      <PhotoSlider :photos="early_slides"></PhotoSlider>
       
       <PhotoRow 
         v-for="(photo_list, index) in early_list"
@@ -41,8 +48,7 @@
           <ImageEnlarge :src="item.img" :width="item.w" :height="item.h" />
         </template>
       </PhotoRow>
-      <p> Early Hightlights </p>
-      <PhotoSlider :photos="early_slides"></PhotoSlider>
+      
     </main>
 </template>
     
@@ -150,6 +156,17 @@
           items: [{ img: 'images/~2022/2019.JPG', w:400, h: 500 }]
         }
       ];
+      
+      const twenty_four_europe_slides = [
+        'images/world/2024/ast-hall.jpg',
+        'images/world/2024/cz-ck.jpg',
+        'images/world/2024/cz-kv.jpg',
+        'images/world/2024/cz-pra.jpg',
+        'images/world/2024/sla-1.jpg',
+        'images/world/2024/sla-2.jpg',
+        'images/world/2024/hu-1.JPG',
+        'images/world/2024/hu-2.jpg',
+      ];
 
       const twenty_four_slides = [
         'images/2024/AZ-1.jpg',
@@ -206,6 +223,7 @@
         twenty_four_list,
         twenty_three_list,
         early_list,
+        twenty_four_europe_slides,
         twenty_four_slides,
         twenty_three_slides,
         early_slides,
