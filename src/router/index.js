@@ -3,6 +3,7 @@ import HomePage from "@/views/HomeView.vue";
 import PhotoGallary from "@/views/PhotoView.vue";
 import AwardsPage from "@/views/AwardsView.vue";
 import ProjectPage from "@/views/ProjectsView.vue";
+import TechView from '../views/TechView.vue'
 
 const routes = [
   {
@@ -24,6 +25,11 @@ const routes = [
     path: "/project",
     name: "Projects",
     component: ProjectPage,
+  },
+  {
+    path: '/tech',
+    name: 'Tech Blog',
+    component: TechView
   }
 ];
 
