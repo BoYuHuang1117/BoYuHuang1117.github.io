@@ -16,6 +16,10 @@
     <tab>
       <router-link to="/project">Projects</router-link>
     </tab>
+    |
+    <tab>
+      <router-link to="/tech">Tech Blog</router-link>
+    </tab>
     <router-view />
     
   </div>
