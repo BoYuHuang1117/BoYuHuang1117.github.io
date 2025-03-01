@@ -1,54 +1,79 @@
 <template>
     <main>
-      <h1>Travel around the world</h1>
-      <p> 2024 East Europe Highlights </p>
-      <PhotoSlider :photos="twenty_four_europe_slides"></PhotoSlider>
+      <div class="year-navigation">
+        <button 
+          v-for="year in availableYears" 
+          :key="year"
+          :class="['year-btn', { active: currentYear === year }]"
+          @click="currentYear = year"
+        >
+          {{ year }}
+        </button>
+      </div>
 
-      <h1>Travel across the States</h1>
-      <p> 2024 Hightlights </p>
-      <PhotoSlider :photos="twenty_four_slides"></PhotoSlider>
+      <div v-if="currentYear === 2024" class="year-section">
+        <section class="gallery-section">
+          <h1>Travel around the world</h1>
+          <p>2024 East Europe Highlights</p>
+          <PhotoSlider :photos="twenty_four_europe_slides"></PhotoSlider>
+        </section>
 
-      <PhotoRow 
-        v-for="(photo_list, index) in twenty_four_list"
-        :key="index"
-        :photo_list="photo_list"
-        :isExpanded="expandedIndex[0] === index"
-        @toggle="handleToggle(0, index)"
-      >
-        <template v-for="(item, index) in photo_list.items" :key="index">
-          <ImageEnlarge :src="item.img" :width="item.w" :height="item.h" />
-        </template>
-      </PhotoRow>
-      
-      <PhotoRow 
-        v-for="(photo_list, index) in twenty_three_list"
-        :key="index"
-        :photo_list="photo_list"
-        :isExpanded="expandedIndex[1] === index"
-        @toggle="handleToggle(1, index)"
-      >
-        <template v-for="(item, index) in photo_list.items" :key="index">
-          <ImageEnlarge :src="item.img" :width="item.w" :height="item.h" />
-        </template>
-        
-      </PhotoRow>
-      <p> 2023 Hightlights </p>
-      <PhotoSlider :photos="twenty_three_slides"></PhotoSlider>
-      <p> Early Hightlights </p>
-      <PhotoSlider :photos="early_slides"></PhotoSlider>
-      
-      <PhotoRow 
-        v-for="(photo_list, index) in early_list"
-        :key="index"
-        :photo_list="photo_list"
-        :isExpanded="expandedIndex[2] === index"
-        @toggle="handleToggle(2, index)"
-      >
-        <template v-for="(item, index) in photo_list.items" :key="index">
-          <ImageEnlarge :src="item.img" :width="item.w" :height="item.h" />
-        </template>
-      </PhotoRow>
-      
+        <section class="gallery-section">
+          <h1>Travel across the States</h1>
+          <p>2024 Highlights</p>
+          <PhotoSlider :photos="twenty_four_slides"></PhotoSlider>
+
+          <PhotoRow 
+            v-for="(photo_list, index) in twenty_four_list"
+            :key="index"
+            :photo_list="photo_list"
+            :isExpanded="expandedIndex[0] === index"
+            @toggle="handleToggle(0, index)"
+          >
+            <template v-for="(item, index) in photo_list.items" :key="index">
+              <ImageEnlarge :src="item.img" :width="item.w" :height="item.h" />
+            </template>
+          </PhotoRow>
+        </section>
+      </div>
+
+      <div v-if="currentYear === 2023" class="year-section">
+        <section class="gallery-section">
+          <h1>2023 Collection</h1>
+          <PhotoSlider :photos="twenty_three_slides"></PhotoSlider>
+
+          <PhotoRow 
+            v-for="(photo_list, index) in twenty_three_list"
+            :key="index"
+            :photo_list="photo_list"
+            :isExpanded="expandedIndex[1] === index"
+            @toggle="handleToggle(1, index)"
+          >
+            <template v-for="(item, index) in photo_list.items" :key="index">
+              <ImageEnlarge :src="item.img" :width="item.w" :height="item.h" />
+            </template>
+          </PhotoRow>
+        </section>
+      </div>
+
+      <div v-if="currentYear === 2022" class="year-section">
+        <section class="gallery-section">
+          <h1>2022 and Earlier</h1>
+          <PhotoSlider :photos="early_slides"></PhotoSlider>
+
+          <PhotoRow 
+            v-for="(photo_list, index) in early_list"
+            :key="index"
+            :photo_list="photo_list"
+            :isExpanded="expandedIndex[2] === index"
+            @toggle="handleToggle(2, index)"
+          >
+            <template v-for="(item, index) in photo_list.items" :key="index">
+              <ImageEnlarge :src="item.img" :width="item.w" :height="item.h" />
+            </template>
+          </PhotoRow>
+        </section>
+      </div>
     </main>
 </template>
     
@@ -219,6 +244,9 @@
         expandedIndex.value[list_idx] = expandedIndex.value[list_idx] === index ? null : index;
       };
 
+      const currentYear = ref(2024);
+      const availableYears = [2024, 2023, 2022];
+
       return {
         twenty_four_list,
         twenty_three_list,
@@ -228,7 +256,9 @@
         twenty_three_slides,
         early_slides,
         expandedIndex,
-        handleToggle
+        handleToggle,
+        currentYear,
+        availableYears,
       };
     }
   });
@@ -254,5 +284,65 @@
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   }
 
+  .year-navigation {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 30px;
+    padding: 10px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+
+  .year-btn {
+    padding: 8px 16px;
+    border: none;
+    border-radius: 4px;
+    background-color: #e0e0e0;
+    cursor: pointer;
+    font-size: 1.1em;
+    transition: all 0.3s ease;
+  }
+
+  .year-btn.active {
+    background-color: #2c3e50;
+    color: white;
+  }
+
+  .year-btn:hover {
+    background-color: #2c3e50;
+    color: white;
+  }
+
+  .gallery-section {
+    margin-bottom: 40px;
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+
+  .gallery-section h1 {
+    color: #2c3e50;
+    margin-bottom: 15px;
+    font-size: 1.8em;
+  }
+
+  .gallery-section p {
+    color: #666;
+    margin-bottom: 20px;
+  }
+
+  @media (max-width: 768px) {
+    .year-navigation {
+      flex-wrap: wrap;
+    }
+
+    .year-btn {
+      font-size: 1em;
+      padding: 6px 12px;
+    }
+  }
 </style>
     
