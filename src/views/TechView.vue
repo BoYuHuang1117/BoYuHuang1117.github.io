@@ -45,6 +45,32 @@ export default defineComponent({
   setup() {
     const articles = [
       {
+        title: 'What is GIL (Global interpreter lock) in Python?',
+        date: '2025-03-01',
+        tags: ['Python', 'GIL', 'multithreading', 'multiprocessing'],
+        content: `
+          <p>Python, being an interpreted programming language instead of compiled language.
+            GIL is a mechanism that was inserted in the early Python development phase.
+            It ensures only one thread running Python code at a time and prevents multiple threads from executing Python bytecodes simultaneously. </p>
+          <p>Python took an easier route to handle memory management on multi threads with a simple global lock on a process.
+            Because it’s not thread safe and no sophisticated mutex is implemented, a global lock is necessary.</p>
+          <div>
+            Regarding performance:
+            <ul>
+              <li> <b>CPU-bound tasks</b> (e.g. heavy computation) do not benefit from multi-threading.</li>
+              <li> <b>I/O-bound tasks</b> (e.g. network request, file operations) can benefit from multi-threading since the GIL is released during I/O operations.
+              <li> <b>Multi-processing</b> is a good alternative because each process has its own GIL.</li>
+            </ul>
+          </div>
+          <p>Follow up: What if I want my process to do some computation after I fetch the data from a network request?</p>
+          <ul>
+            <li>If post-processing is light → Use multi-threading.</li>
+            <li>If post-processing is heavy → Use multi-processing.</li>
+            <li>If fetching is I/O-bound and processing is CPU-heavy → Use a hybrid approach (Threading + Multiprocessing).</li>
+          </ul>
+        `
+      },
+      {
         title: 'Is set (STL in C/C++) really O(1)?',
         date: '2025-02-05',
         tags: ['C++', 'Hashset', 'unordered_set'],
@@ -108,7 +134,7 @@ Node(K, V)getNode(Object key){
       }
     ];
 
-    const articlesPerPage = 2; // Show one article per page
+    const articlesPerPage = 3; // Show three articles per page
     const currentPage = ref(1);
 
     const totalPages = computed(() => Math.ceil(articles.length / articlesPerPage));
