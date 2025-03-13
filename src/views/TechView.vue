@@ -96,12 +96,12 @@ export default defineComponent({
               <td>I/O-bound tasks</td>
             </tr>
             <tr>
-              <td>C</td>
+              <td>C - programming language</td>
               <td>Uses fork()</td>
               <td>Uses pthreads</td>
             </tr>
             <tr>
-              <td>Java</td>
+              <td>Java - programming language</td>
               <td>Uses ProcessBuilder</td>
               <td>Uses Thread or Runnable</td>
             </tr>
@@ -111,7 +111,7 @@ export default defineComponent({
             <ul>
               <li>Use <b>multiprocessing</b> when tasks are independent and <b>CPU-intensive</b> (e.g. parallel computations, heavy data processing,
                 machine learning, image processing). </li>
-              <li>Use <b>Multithreading</b> when tasks are interdependent and require fast communication, namely, <b>I/O-heavy tasks</b> 
+              <li>Use <b>multithreading</b> when tasks are interdependent and require fast communication, namely, <b>I/O-heavy tasks</b> 
                 (e.g., UI updates, network calls, web servers, file read).</li>
             </ul>
           </div>
@@ -229,23 +229,7 @@ Node(K, V)getNode(Object key){
 </script>
 
 <style>
-/* Global styles for tables */
-table {
-  font-family: arial, sans-serif;
-  border-collapse: collapse;
-  width: 100%;
-  margin: 15px 0;
-}
-
-td, th {
-  border: 1px solid #dddddd;
-  text-align: left;
-  padding: 8px;
-}
-
-tr:nth-child(even) {
-  background-color: #dddddd;
-}
+/* Remove the global table styles and move them to scoped with :deep() */
 </style>
 
 <style scoped>
@@ -361,19 +345,44 @@ main {
 }
 
 :deep(table) {
-  font-family: arial, sans-serif;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   border-collapse: collapse;
   width: 100%;
-  margin: 15px 0;
+  margin: 25px 0;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  overflow: hidden;
+  background-color: white;
 }
 
-:deep(td), :deep(th) {
-  border: 1px solid #dddddd;
-  text-align: left;
-  padding: 8px;
+:deep(th) {
+  background-color: #2c3e50;
+  color: white;
+  font-weight: 600;
+  padding: 12px 15px;
+  text-transform: uppercase;
+  font-size: 0.9em;
+  letter-spacing: 0.5px;
+}
+
+:deep(td) {
+  padding: 12px 15px;
+  border-bottom: 1px solid #e0e0e0;
+  color: #333;
+  line-height: 1.4;
 }
 
 :deep(tr:nth-child(even)) {
-  background-color: #dddddd;
+  background-color: #f8f9fa;
+}
+
+:deep(tr:hover) {
+  background-color: #f1f4f7;
+  transition: background-color 0.2s ease;
+}
+
+/* Remove border from last row */
+:deep(tr:last-child td) {
+  border-bottom: none;
 }
 </style> 
