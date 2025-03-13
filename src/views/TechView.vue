@@ -45,6 +45,79 @@ export default defineComponent({
   setup() {
     const articles = [
       {
+        title: 'Multiprocessing vs Multithreading',
+        date: '2025-03-13',
+        tags: ['multithreading', 'multiprocessing', 'CPU'],
+        content: `
+          <div>
+            For multiprocessing
+            <ul>
+              <li>Each process has its own memory space and runs independently</li>
+              <li>Benefit from multiple CPU cores</li>
+              <li>In Unix-based systems, C will use <b>fork()</b> to create new processes</li>
+              <li>Communication between processes requires mechanisms like inter-process communication <b>(IPC)</b>.</li>
+            </ul>
+            For multithreading
+            <ul>
+              <li>Uses multiple threads <b>within a single process</b>.</li>
+              <li>Threads share memory, making data sharing easier but also leading to potential race conditions.</li>
+              <li>In C, it uses POSIX threads (<b>pthreads</b>) for multithreading.</li>
+              <li>In Python, due to the Global Interpreter Lock (GIL), multithreading doesn't achieve true parallelism for CPU-bound tasks.</li>
+          </div>
+          <table>
+            <tr>
+              <th>Type</th>
+              <th>Multiprocessing</th>
+              <th>Multithreading</th>
+            </tr>
+            <tr>
+              <td>Memory usage</td>
+              <td>High (separate memory space)</td>
+              <td>Low (shared memory)</td>
+            </tr>
+            <tr>
+              <td>Context Switching</td>
+              <td>Expensive (process switch)</td>
+              <td>Cheaper (thread switch)</td>
+            </tr>
+            <tr>
+              <td>Communication</td>
+              <td>Needs IPC (pipes, shared memory)</td>
+              <td>Easier (shared memory)</td>
+            </tr>
+            <tr>
+              <td>Concurrency Type</td>
+              <td>True parallelism (if multi-core CPU)</td>
+              <td>Concurrent execution but shared CPU time</td>
+            </tr>
+            <tr>
+              <td>Best for</td>
+              <td>CPU-bound tasks</td>
+              <td>I/O-bound tasks</td>
+            </tr>
+            <tr>
+              <td>C</td>
+              <td>Uses fork()</td>
+              <td>Uses pthreads</td>
+            </tr>
+            <tr>
+              <td>Java</td>
+              <td>Uses ProcessBuilder</td>
+              <td>Uses Thread or Runnable</td>
+            </tr>
+          </table>
+          <div>
+            When to use?
+            <ul>
+              <li>Use <b>multiprocessing</b> when tasks are independent and <b>CPU-intensive</b> (e.g. parallel computations, heavy data processing,
+                machine learning, image processing). </li>
+              <li>Use <b>Multithreading</b> when tasks are interdependent and require fast communication, namely, <b>I/O-heavy tasks</b> 
+                (e.g., UI updates, network calls, web servers, file read).</li>
+            </ul>
+          </div>
+        `
+      },
+      {
         title: 'What is GIL (Global interpreter lock) in Python?',
         date: '2025-03-01',
         tags: ['Python', 'GIL', 'multithreading', 'multiprocessing'],
@@ -53,7 +126,7 @@ export default defineComponent({
             GIL is a mechanism that was inserted in the early Python development phase.
             It ensures only one thread running Python code at a time and prevents multiple threads from executing Python bytecodes simultaneously. </p>
           <p>Python took an easier route to handle memory management on multi threads with a simple global lock on a process.
-            Because it’s not thread safe and no sophisticated mutex is implemented, a global lock is necessary.</p>
+            Because it's not thread safe and no sophisticated mutex is implemented, a global lock is necessary.</p>
           <div>
             Regarding performance:
             <ul>
@@ -76,9 +149,9 @@ export default defineComponent({
         tags: ['C++', 'Hashset', 'unordered_set'],
         content: `
           <p>std::set in C++ is O(log n) because it's a <b>tree-based set</b>. 
-            It’s a balanced binary search tree which usually is a red-black tree. 
+            It's a balanced binary search tree which usually is a red-black tree. 
             To achieve O(1), try to use <b>unordered_set</b>.</p>
-          <p>In Python, it’s O(1) average.</p>
+          <p>In Python, it's O(1) average.</p>
           <p>In Java, there are three different implementations.</p>
           <ul>
             <li>Hashset: O(1) average; O(n) worst</li>
@@ -99,7 +172,7 @@ export default defineComponent({
             <li>initial capacity: 16</li>
             <li>load factor: 0.75</li>
           </ul>
-          <p>Assuming that the length of the hashmap is 16 initially, we will use 11112 to locate the bucket.
+          <p>Assuming that the length of the hashmap is 16 initially, we will use <var>1111<sub>2</sub></var> to locate the bucket.
             Utilizing the AND operator, the bucket index will be the <b>lower 4 bits</b> (depends on hashmap size) of the hash value.
             Then, it will traverse the linked list in the bucket until it gets to the last non-empty or first empty node.</p>
           <p>In case of a <b>collision (index duplication)</b>, nodes within the same bucket will turn into a linked list which allows next to come into play.
@@ -107,7 +180,7 @@ export default defineComponent({
           <ul>
             <li>What is the difference between hashmap and map?
             Map is an interface. Hashmap is a concrete class. Hashmap implements Map interface.</li>
-            <li> If reaching the load factor on the bucket number, the resize process will enforce capacity to multiply 2 in order to keep using 111112 for locating the bucket index.</li>
+            <li> If reaching the load factor on the bucket number, the resize process will enforce capacity to multiply 2 in order to keep using <var>11111<sub>2</sub></var> for locating the bucket index.</li>
           </ul>
         `,
         codeExample: `
@@ -154,6 +227,26 @@ Node(K, V)getNode(Object key){
   }
 });
 </script>
+
+<style>
+/* Global styles for tables */
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+  margin: 15px 0;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+</style>
 
 <style scoped>
 main {
@@ -265,5 +358,22 @@ main {
 
 .page-info {
   color: #666;
+}
+
+:deep(table) {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+  margin: 15px 0;
+}
+
+:deep(td), :deep(th) {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+:deep(tr:nth-child(even)) {
+  background-color: #dddddd;
 }
 </style> 
