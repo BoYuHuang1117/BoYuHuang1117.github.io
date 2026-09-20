@@ -11,6 +11,26 @@
         </button>
       </div>
 
+      <div v-if="currentYear === 2026" class="year-section">
+        <section class="gallery-section">
+          <h1>2026 Collection</h1>
+          <p>Alaska Highlights</p>
+          <PhotoSlider :photos="twenty_six_slides"></PhotoSlider>
+
+          <PhotoRow 
+            v-for="(photo_list, index) in twenty_six_list"
+            :key="index"
+            :photo_list="photo_list"
+            :isExpanded="expandedIndex[3] === index"
+            @toggle="handleToggle(3, index)"
+          >
+            <template v-for="(item, index) in photo_list.items" :key="index">
+              <ImageEnlarge :src="item.img" :width="item.w" :height="item.h" />
+            </template>
+          </PhotoRow>
+        </section>
+      </div>
+
       <div v-if="currentYear === 2024" class="year-section">
         <section class="gallery-section">
           <h1>Travel around the world</h1>
@@ -91,6 +111,17 @@
       PhotoSlider,
     },
     setup () {
+      const twenty_six_list = [
+        {
+          key: "Jul 2026 - Alaska, AK",
+          items: [
+            { img: 'images/2026/AK-1.jpg', w: 400, h: 300 },
+            { img: 'images/2026/AK-2.jpg', w: 400, h: 300 },
+            { img: 'images/2026/AK-3.JPG', w: 400, h: 300 }
+          ]
+        }
+      ];
+
       const twenty_four_list = [
         {
           key: "May 2024 - Indianapolis, IN",
@@ -182,6 +213,12 @@
         }
       ];
       
+      const twenty_six_slides = [
+        'images/2026/AK-1.jpg',
+        'images/2026/AK-2.jpg',
+        'images/2026/AK-3.JPG',
+      ];
+
       const twenty_four_europe_slides = [
         'images/world/2024/ast-hall.jpg',
         'images/world/2024/cz-ck.jpg',
@@ -238,19 +275,21 @@
         'images/~2022/Dune.jpg',
       ];
       
-      const expandedIndex = ref([null, null, null]);
+      const expandedIndex = ref([null, null, null, null]);
       
       const handleToggle = (list_idx, index) => {
         expandedIndex.value[list_idx] = expandedIndex.value[list_idx] === index ? null : index;
       };
 
-      const currentYear = ref(2024);
-      const availableYears = [2024, 2023, 2022];
+      const currentYear = ref(2026);
+      const availableYears = [2026, 2024, 2023, 2022];
 
       return {
+        twenty_six_list,
         twenty_four_list,
         twenty_three_list,
         early_list,
+        twenty_six_slides,
         twenty_four_europe_slides,
         twenty_four_slides,
         twenty_three_slides,
